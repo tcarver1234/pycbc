@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pycbc.events package &mdash; PyCBC da2640 documentation</title>
+  <title>pycbc.events package &mdash; PyCBC 1.14.dev1 documentation</title>
   
 
   
@@ -62,10 +62,6 @@
 
           
             
-            
-              <div class="version">
-                1.14.0
-              </div>
             
           
 
@@ -264,7 +260,7 @@
 coincident triggers.</p>
 <dl class="class">
 <dt id="pycbc.events.coinc.CoincExpireBuffer">
-<em class="property">class </em><code class="descclassname">pycbc.events.coinc.</code><code class="descname">CoincExpireBuffer</code><span class="sig-paren">(</span><em>expiration</em>, <em>ifos</em>, <em>initial_size=1048576</em>, <em>dtype=&lt;type 'numpy.float32'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pycbc/events/coinc.html#CoincExpireBuffer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pycbc.events.coinc.CoincExpireBuffer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pycbc.events.coinc.</code><code class="descname">CoincExpireBuffer</code><span class="sig-paren">(</span><em>expiration</em>, <em>ifos</em>, <em>initial_size=1048576</em>, <em>dtype=&lt;class 'numpy.float32'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pycbc/events/coinc.html#CoincExpireBuffer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pycbc.events.coinc.CoincExpireBuffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Unordered dynamic sized buffer that handles
 multiple expiration vectors.</p>
@@ -1217,7 +1213,7 @@ variation statistic</p>
 
 <dl class="class">
 <dt id="pycbc.events.simd_threshold.ThreshClusterObject">
-<em class="property">class </em><code class="descclassname">pycbc.events.simd_threshold.</code><code class="descname">ThreshClusterObject</code><span class="sig-paren">(</span><em>series</em>, <em>window</em>, <em>segsize=32768</em>, <em>verbose=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pycbc/events/simd_threshold.html#ThreshClusterObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pycbc.events.simd_threshold.ThreshClusterObject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pycbc.events.simd_threshold.</code><code class="descname">ThreshClusterObject</code><span class="sig-paren">(</span><em>series</em>, <em>window</em>, <em>segsize=32768.0</em>, <em>verbose=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pycbc/events/simd_threshold.html#ThreshClusterObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pycbc.events.simd_threshold.ThreshClusterObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>This class takes a complex SNR time series, a real threshold value, and a window size
 (expressed as a number of complex sample points), and optionally a segment size and

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pycbc.inference.sampler package &mdash; PyCBC da2640 documentation</title>
+  <title>pycbc.inference.sampler package &mdash; PyCBC 1.14.dev1 documentation</title>
   
 
   
@@ -62,10 +62,6 @@
 
           
             
-            
-              <div class="version">
-                1.14.0
-              </div>
             
           
 
@@ -983,7 +979,7 @@ Each array will have shape <code class="docutils literal notranslate"><span clas
 
 <dl class="function">
 <dt id="pycbc.inference.sampler.base_mcmc.get_optional_arg_from_config">
-<code class="descclassname">pycbc.inference.sampler.base_mcmc.</code><code class="descname">get_optional_arg_from_config</code><span class="sig-paren">(</span><em>cp</em>, <em>section</em>, <em>arg</em>, <em>dtype=&lt;type 'str'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pycbc/inference/sampler/base_mcmc.html#get_optional_arg_from_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pycbc.inference.sampler.base_mcmc.get_optional_arg_from_config" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pycbc.inference.sampler.base_mcmc.</code><code class="descname">get_optional_arg_from_config</code><span class="sig-paren">(</span><em>cp</em>, <em>section</em>, <em>arg</em>, <em>dtype=&lt;class 'str'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pycbc/inference/sampler/base_mcmc.html#get_optional_arg_from_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pycbc.inference.sampler.base_mcmc.get_optional_arg_from_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience function to retrieve an optional argument from a config
 file.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1171,7 +1167,12 @@ cores/nodes/etc.</li>
 <dl class="attribute">
 <dt id="pycbc.inference.sampler.emcee.EmceeEnsembleSampler.base_shape">
 <code class="descname">base_shape</code><a class="headerlink" href="#pycbc.inference.sampler.emcee.EmceeEnsembleSampler.base_shape" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>What shape the sampler’s samples arrays are in, excluding
+the iterations dimension.</p>
+<p>For example, if a sampler uses 20 walkers and 3 temperatures, this
+would be <code class="docutils literal notranslate"><span class="pre">(3,</span> <span class="pre">20)</span></code>. If a sampler only uses a single walker and no
+temperatures this would be <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="pycbc.inference.sampler.emcee.EmceeEnsembleSampler.burn_in_class">
@@ -1201,7 +1202,11 @@ this just passes.</p>
 <dl class="attribute">
 <dt id="pycbc.inference.sampler.emcee.EmceeEnsembleSampler.io">
 <code class="descname">io</code><a class="headerlink" href="#pycbc.inference.sampler.emcee.EmceeEnsembleSampler.io" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>A class that inherits from <code class="docutils literal notranslate"><span class="pre">BaseInferenceFile</span></code> to handle IO with
+an hdf file.</p>
+<p>This should be a class, not an instance of class, so that the sampler
+can initialize it when needed.</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="pycbc.inference.sampler.emcee.EmceeEnsembleSampler.model_stats">
@@ -1295,7 +1300,12 @@ cores/nodes/etc.</li>
 <dl class="attribute">
 <dt id="pycbc.inference.sampler.emcee_pt.EmceePTSampler.base_shape">
 <code class="descname">base_shape</code><a class="headerlink" href="#pycbc.inference.sampler.emcee_pt.EmceePTSampler.base_shape" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>What shape the sampler’s samples arrays are in, excluding
+the iterations dimension.</p>
+<p>For example, if a sampler uses 20 walkers and 3 temperatures, this
+would be <code class="docutils literal notranslate"><span class="pre">(3,</span> <span class="pre">20)</span></code>. If a sampler only uses a single walker and no
+temperatures this would be <code class="docutils literal notranslate"><span class="pre">()</span></code>.</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="pycbc.inference.sampler.emcee_pt.EmceePTSampler.betas">
@@ -1373,7 +1383,11 @@ construct the ladder with “ntemps” geometrically spaced temperatures.</p>
 <dl class="attribute">
 <dt id="pycbc.inference.sampler.emcee_pt.EmceePTSampler.io">
 <code class="descname">io</code><a class="headerlink" href="#pycbc.inference.sampler.emcee_pt.EmceePTSampler.io" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>A class that inherits from <code class="docutils literal notranslate"><span class="pre">BaseInferenceFile</span></code> to handle IO with
+an hdf file.</p>
+<p>This should be a class, not an instance of class, so that the sampler
+can initialize it when needed.</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="pycbc.inference.sampler.emcee_pt.EmceePTSampler.model_stats">
@@ -1530,7 +1544,11 @@ evidence.</p>
 <dl class="attribute">
 <dt id="pycbc.inference.sampler.multinest.MultinestSampler.io">
 <code class="descname">io</code><a class="headerlink" href="#pycbc.inference.sampler.multinest.MultinestSampler.io" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>A class that inherits from <code class="docutils literal notranslate"><span class="pre">BaseInferenceFile</span></code> to handle IO with
+an hdf file.</p>
+<p>This should be a class, not an instance of class, so that the sampler
+can initialize it when needed.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pycbc.inference.sampler.multinest.MultinestSampler.loglikelihood">
