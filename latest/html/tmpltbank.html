@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PyCBC template bank generation documentation (pycbc.tmpltbank) &mdash; PyCBC d63cfe documentation</title>
+  <title>PyCBC template bank generation documentation (pycbc.tmpltbank) &mdash; PyCBC 1.14.dev1 documentation</title>
   
 
   
@@ -62,10 +62,6 @@
 
           
             
-            
-              <div class="version">
-                1.14.0
-              </div>
             
           
 
@@ -397,8 +393,8 @@ usage: pycbc_geom_nonspinbank [-h] [--version] [-V]
                               [--witness-tf-file WITNESS_TF_FILE]
                               [--witness-filter-length WITNESS_FILTER_LENGTH]
                               [--calculate-time-metric-components | --calculate-ethinca-metric]
-                              [--ethinca-pn-order {threePointFivePN,twoPN,twoPointFivePN,threePN,onePointFivePN,onePN,zeroPN}]
-                              [--filter-cutoff {HybridMECO,SEOBNRv1RD,LightRing,MECO,LRD,FRD,EOBNRv2RD,SEOBNRv2RD,BKLISCO,ERD,SEOBNRv4RD,EOBNRv2HMRD,SEOBNRv2Peak,IMRPhenomCFinal,IMRPhenomDPeak,SEOBNRv4Peak,SEOBNRv1Peak,IMRPhenomBFinal,SchwarzISCO}]
+                              [--ethinca-pn-order {zeroPN,onePN,onePointFivePN,twoPN,twoPointFivePN,threePN,threePointFivePN}]
+                              [--filter-cutoff {SchwarzISCO,LightRing,ERD,BKLISCO,FRD,LRD,MECO,HybridMECO,IMRPhenomBFinal,IMRPhenomCFinal,IMRPhenomDPeak,EOBNRv2RD,EOBNRv2HMRD,SEOBNRv1RD,SEOBNRv1Peak,SEOBNRv2RD,SEOBNRv2Peak,SEOBNRv4RD,SEOBNRv4Peak}]
                               [--ethinca-frequency-step ETHINCA_FREQUENCY_STEP]
 
 Template bank generator for placing a bank of non-spinning templates.
@@ -682,12 +678,12 @@ Ethinca metric options:
                         If given, the ethinca metric will be calculated and
                         stored in the Gamma entries of the sngl_inspiral
                         table. OPTIONAL, default=False (default: False)
-  --ethinca-pn-order {threePointFivePN,twoPN,twoPointFivePN,threePN,onePointFivePN,onePN,zeroPN}
+  --ethinca-pn-order {zeroPN,onePN,onePointFivePN,twoPN,twoPointFivePN,threePN,threePointFivePN}
                         Specify a PN order to be used in calculating the
                         ethinca metric. OPTIONAL: if not specified, the same
                         order will be used as for the bank metric. (default:
                         None)
-  --filter-cutoff {HybridMECO,SEOBNRv1RD,LightRing,MECO,LRD,FRD,EOBNRv2RD,SEOBNRv2RD,BKLISCO,ERD,SEOBNRv4RD,EOBNRv2HMRD,SEOBNRv2Peak,IMRPhenomCFinal,IMRPhenomDPeak,SEOBNRv4Peak,SEOBNRv1Peak,IMRPhenomBFinal,SchwarzISCO}
+  --filter-cutoff {SchwarzISCO,LightRing,ERD,BKLISCO,FRD,LRD,MECO,HybridMECO,IMRPhenomBFinal,IMRPhenomCFinal,IMRPhenomDPeak,EOBNRv2RD,EOBNRv2HMRD,SEOBNRv1RD,SEOBNRv1Peak,SEOBNRv2RD,SEOBNRv2Peak,SEOBNRv4RD,SEOBNRv4Peak}
                         Specify an upper frequency cutoff formula for the
                         ethinca metric calculation, and for the values of
                         f_final assigned to the templates. REQUIRED if the
@@ -847,8 +843,8 @@ usage: pycbc_geom_aligned_bank [-h] [--version] [-V] [-s STACK_DISTANCE] [-3]
                                [--witness-tf-file WITNESS_TF_FILE]
                                [--witness-filter-length WITNESS_FILTER_LENGTH]
                                [--calculate-time-metric-components | --calculate-ethinca-metric]
-                               [--ethinca-pn-order {threePointFivePN,twoPN,twoPointFivePN,threePN,onePointFivePN,onePN,zeroPN}]
-                               [--filter-cutoff {HybridMECO,SEOBNRv1RD,LightRing,MECO,LRD,FRD,EOBNRv2RD,SEOBNRv2RD,BKLISCO,ERD,SEOBNRv4RD,EOBNRv2HMRD,SEOBNRv2Peak,IMRPhenomCFinal,IMRPhenomDPeak,SEOBNRv4Peak,SEOBNRv1Peak,IMRPhenomBFinal,SchwarzISCO}]
+                               [--ethinca-pn-order {zeroPN,onePN,onePointFivePN,twoPN,twoPointFivePN,threePN,threePointFivePN}]
+                               [--filter-cutoff {SchwarzISCO,LightRing,ERD,BKLISCO,FRD,LRD,MECO,HybridMECO,IMRPhenomBFinal,IMRPhenomCFinal,IMRPhenomDPeak,EOBNRv2RD,EOBNRv2HMRD,SEOBNRv1RD,SEOBNRv1Peak,SEOBNRv2RD,SEOBNRv2Peak,SEOBNRv4RD,SEOBNRv4Peak}]
                                [--ethinca-frequency-step ETHINCA_FREQUENCY_STEP]
 
 Aligned spin bank generator. Initial placement of template points, and
@@ -1200,12 +1196,12 @@ Ethinca metric options:
                         If given, the ethinca metric will be calculated and
                         stored in the Gamma entries of the sngl_inspiral
                         table. OPTIONAL, default=False (default: False)
-  --ethinca-pn-order {threePointFivePN,twoPN,twoPointFivePN,threePN,onePointFivePN,onePN,zeroPN}
+  --ethinca-pn-order {zeroPN,onePN,onePointFivePN,twoPN,twoPointFivePN,threePN,threePointFivePN}
                         Specify a PN order to be used in calculating the
                         ethinca metric. OPTIONAL: if not specified, the same
                         order will be used as for the bank metric. (default:
                         None)
-  --filter-cutoff {HybridMECO,SEOBNRv1RD,LightRing,MECO,LRD,FRD,EOBNRv2RD,SEOBNRv2RD,BKLISCO,ERD,SEOBNRv4RD,EOBNRv2HMRD,SEOBNRv2Peak,IMRPhenomCFinal,IMRPhenomDPeak,SEOBNRv4Peak,SEOBNRv1Peak,IMRPhenomBFinal,SchwarzISCO}
+  --filter-cutoff {SchwarzISCO,LightRing,ERD,BKLISCO,FRD,LRD,MECO,HybridMECO,IMRPhenomBFinal,IMRPhenomCFinal,IMRPhenomDPeak,EOBNRv2RD,EOBNRv2HMRD,SEOBNRv1RD,SEOBNRv1Peak,SEOBNRv2RD,SEOBNRv2Peak,SEOBNRv4RD,SEOBNRv4Peak}
                         Specify an upper frequency cutoff formula for the
                         ethinca metric calculation, and for the values of
                         f_final assigned to the templates. REQUIRED if the
@@ -1361,7 +1357,7 @@ to the non-spinning code and the aligned-spin geometric code (they use the same 
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ pycbc_aligned_stoch_bank --help
 usage: pycbc_aligned_stoch_bank [-h] [--version] [--verbose] [-V]
                                 [--bank-fupper-step BANK_FUPPER_STEP]
-                                [--bank-fupper-formula {HybridMECO,SEOBNRv1RD,LightRing,MECO,LRD,FRD,EOBNRv2RD,SEOBNRv2RD,BKLISCO,ERD,SEOBNRv4RD,EOBNRv2HMRD,SEOBNRv2Peak,IMRPhenomCFinal,IMRPhenomDPeak,SEOBNRv4Peak,SEOBNRv1Peak,IMRPhenomBFinal,SchwarzISCO}]
+                                [--bank-fupper-formula {SchwarzISCO,LightRing,ERD,BKLISCO,FRD,LRD,MECO,HybridMECO,IMRPhenomBFinal,IMRPhenomCFinal,IMRPhenomDPeak,EOBNRv2RD,EOBNRv2HMRD,SEOBNRv1RD,SEOBNRv1Peak,SEOBNRv2RD,SEOBNRv2Peak,SEOBNRv4RD,SEOBNRv4Peak}]
                                 [-N NUM_SEEDS] [-n NUM_FAILED_CUTOFF]
                                 [--random-seed RANDOM_SEED] -m MIN_MATCH -O
                                 OUTPUT_FILE [--f-low-column NAME] --pn-order
@@ -1429,8 +1425,8 @@ usage: pycbc_aligned_stoch_bank [-h] [--version] [--verbose] [-V]
                                 [--witness-tf-file WITNESS_TF_FILE]
                                 [--witness-filter-length WITNESS_FILTER_LENGTH]
                                 [--calculate-time-metric-components | --calculate-ethinca-metric]
-                                [--ethinca-pn-order {threePointFivePN,twoPN,twoPointFivePN,threePN,onePointFivePN,onePN,zeroPN}]
-                                [--filter-cutoff {HybridMECO,SEOBNRv1RD,LightRing,MECO,LRD,FRD,EOBNRv2RD,SEOBNRv2RD,BKLISCO,ERD,SEOBNRv4RD,EOBNRv2HMRD,SEOBNRv2Peak,IMRPhenomCFinal,IMRPhenomDPeak,SEOBNRv4Peak,SEOBNRv1Peak,IMRPhenomBFinal,SchwarzISCO}]
+                                [--ethinca-pn-order {zeroPN,onePN,onePointFivePN,twoPN,twoPointFivePN,threePN,threePointFivePN}]
+                                [--filter-cutoff {SchwarzISCO,LightRing,ERD,BKLISCO,FRD,LRD,MECO,HybridMECO,IMRPhenomBFinal,IMRPhenomCFinal,IMRPhenomDPeak,EOBNRv2RD,EOBNRv2HMRD,SEOBNRv1RD,SEOBNRv1Peak,SEOBNRv2RD,SEOBNRv2Peak,SEOBNRv4RD,SEOBNRv4Peak}]
                                 [--ethinca-frequency-step ETHINCA_FREQUENCY_STEP]
 
 Stochastic aligned spin bank generator.
@@ -1447,7 +1443,7 @@ optional arguments:
                         freq-step are also given, the code will use the
                         smaller of the two step values. OPTIONAL. Units=Hz
                         (default: 10.0)
-  --bank-fupper-formula {HybridMECO,SEOBNRv1RD,LightRing,MECO,LRD,FRD,EOBNRv2RD,SEOBNRv2RD,BKLISCO,ERD,SEOBNRv4RD,EOBNRv2HMRD,SEOBNRv2Peak,IMRPhenomCFinal,IMRPhenomDPeak,SEOBNRv4Peak,SEOBNRv1Peak,IMRPhenomBFinal,SchwarzISCO}
+  --bank-fupper-formula {SchwarzISCO,LightRing,ERD,BKLISCO,FRD,LRD,MECO,HybridMECO,IMRPhenomBFinal,IMRPhenomCFinal,IMRPhenomDPeak,EOBNRv2RD,EOBNRv2HMRD,SEOBNRv1RD,SEOBNRv1Peak,SEOBNRv2RD,SEOBNRv2Peak,SEOBNRv4RD,SEOBNRv4Peak}
                         Frequency cutoff formula for varying fupper.
                         Frequencies will be rounded to the nearest discrete
                         step. OPTIONAL. (default: SchwarzISCO)
@@ -1760,12 +1756,12 @@ Ethinca metric options:
                         If given, the ethinca metric will be calculated and
                         stored in the Gamma entries of the sngl_inspiral
                         table. OPTIONAL, default=False (default: False)
-  --ethinca-pn-order {threePointFivePN,twoPN,twoPointFivePN,threePN,onePointFivePN,onePN,zeroPN}
+  --ethinca-pn-order {zeroPN,onePN,onePointFivePN,twoPN,twoPointFivePN,threePN,threePointFivePN}
                         Specify a PN order to be used in calculating the
                         ethinca metric. OPTIONAL: if not specified, the same
                         order will be used as for the bank metric. (default:
                         None)
-  --filter-cutoff {HybridMECO,SEOBNRv1RD,LightRing,MECO,LRD,FRD,EOBNRv2RD,SEOBNRv2RD,BKLISCO,ERD,SEOBNRv4RD,EOBNRv2HMRD,SEOBNRv2Peak,IMRPhenomCFinal,IMRPhenomDPeak,SEOBNRv4Peak,SEOBNRv1Peak,IMRPhenomBFinal,SchwarzISCO}
+  --filter-cutoff {SchwarzISCO,LightRing,ERD,BKLISCO,FRD,LRD,MECO,HybridMECO,IMRPhenomBFinal,IMRPhenomCFinal,IMRPhenomDPeak,EOBNRv2RD,EOBNRv2HMRD,SEOBNRv1RD,SEOBNRv1Peak,SEOBNRv2RD,SEOBNRv2Peak,SEOBNRv4RD,SEOBNRv4Peak}
                         Specify an upper frequency cutoff formula for the
                         ethinca metric calculation, and for the values of
                         f_final assigned to the templates. REQUIRED if the
