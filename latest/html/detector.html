@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Gravitational-wave Detectors &mdash; PyCBC 1.14.dev1 documentation</title>
+  <title>Gravitational-wave Detectors &mdash; PyCBC da2640 documentation</title>
   
 
   
@@ -62,6 +62,10 @@
 
           
             
+            
+              <div class="version">
+                1.14.0
+              </div>
             
           
 
@@ -228,26 +232,26 @@ about how their orientation and position affects their view of a source</p>
 </pre></div>
 </div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ python ../examples/detector/loc.py
+GEO_600 G1 Latitude 0.91184982752 Longitude 0.17116780435
+ALLEGRO_320 A1 Latitude 0.53079879206 Longitude -1.59137068496
+LHO_4k H1 Latitude 0.81079526383 Longitude -2.08405676917
 TAMA_300 T1 Latitude 0.62267336022 Longitude 2.43536359469
 VIRGO_CITF V0 Latitude 0.76151183984 Longitude 0.18333805213
 VIRGO V1 Latitude 0.76151183984 Longitude 0.18333805213
-GEO_600 G1 Latitude 0.91184982752 Longitude 0.17116780435
-LHO_2k H2 Latitude 0.81079526383 Longitude -2.08405676917
-LHO_4k H1 Latitude 0.81079526383 Longitude -2.08405676917
-LLO_4k L1 Latitude 0.53342313506 Longitude -1.58430937078
-LIO_4k I1 Latitude 0.2484185302005262 Longitude 1.3340133249409993
-CIT_40 C1 Latitude 0.59637900541 Longitude -2.06175744538
-ET1_T1400308 E1 Latitude 0.76151183984 Longitude 0.18333805213
-ET2_T1400308 E2 Latitude 0.7629930799 Longitude 0.1840585887
 ET3_T1400308 E3 Latitude 0.76270463257 Longitude 0.1819299673
-ET0_T1400308 E0 Latitude 0.76270463257 Longitude 0.1819299673
-KAGRA K1 Latitude 0.6355068497 Longitude 2.396441015
-ACIGA U1 Latitude 0.0 Longitude 0.0
-ALLEGRO_320 A1 Latitude 0.53079879206 Longitude -1.59137068496
-AURIGA O1 Latitude 0.79156499342 Longitude 0.20853775679
 EXPLORER X1 Latitude 0.81070543755 Longitude 0.10821041362
-Nautilus N1 Latitude 0.7299645671 Longitude 0.22117684946
+CIT_40 C1 Latitude 0.59637900541 Longitude -2.06175744538
+KAGRA K1 Latitude 0.6355068497 Longitude 2.396441015
+ET2_T1400308 E2 Latitude 0.7629930799 Longitude 0.1840585887
+ET0_T1400308 E0 Latitude 0.76270463257 Longitude 0.1819299673
+LIO_4k I1 Latitude 0.248418530201 Longitude 1.33401332494
+ET1_T1400308 E1 Latitude 0.76151183984 Longitude 0.18333805213
+ACIGA U1 Latitude 0.0 Longitude 0.0
+AURIGA O1 Latitude 0.79156499342 Longitude 0.20853775679
 NIOBE B1 Latitude -0.5573418078 Longitude 2.02138216202
+LHO_2k H2 Latitude 0.81079526383 Longitude -2.08405676917
+LLO_4k L1 Latitude 0.53342313506 Longitude -1.58430937078
+Nautilus N1 Latitude 0.7299645671 Longitude 0.22117684946
 </pre></div>
 </div>
 </div>
@@ -263,13 +267,13 @@ NIOBE B1 Latitude -0.5573418078 Longitude 2.02138216202
 </div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ python ../examples/detector/travel.py
 Direct Time from H1 to H1 is 0.0 seconds
-Direct Time from H1 to L1 is 0.010012846152223925 seconds
-Direct Time from H1 to V1 is 0.027287979933844225 seconds
-Direct Time from L1 to H1 is 0.010012846152223925 seconds
+Direct Time from H1 to L1 is 0.0100128461522 seconds
+Direct Time from H1 to V1 is 0.0272879799338 seconds
+Direct Time from L1 to H1 is 0.0100128461522 seconds
 Direct Time from L1 to L1 is 0.0 seconds
-Direct Time from L1 to V1 is 0.026448341016726495 seconds
-Direct Time from V1 to H1 is 0.027287979933844225 seconds
-Direct Time from V1 to L1 is 0.026448341016726495 seconds
+Direct Time from L1 to V1 is 0.0264483410167 seconds
+Direct Time from V1 to H1 is 0.0272879799338 seconds
+Direct Time from V1 to L1 is 0.0264483410167 seconds
 Direct Time from V1 to V1 is 0.0 seconds
 </pre></div>
 </div>
@@ -304,8 +308,8 @@ Direct Time from V1 to V1 is 0.0 seconds
 </div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ python ../examples/detector/delay.py
 GW passed through H1 0.0 seconds relative to passing by Hanford
-GW passed through L1 0.002444164304640816 seconds relative to passing by Hanford
-GW passed through V1 -0.014733669757208141 seconds relative to passing by Hanford
+GW passed through L1 0.00244416431241 seconds relative to passing by Hanford
+GW passed through V1 -0.0147336697335 seconds relative to passing by Hanford
 </pre></div>
 </div>
 </div>
@@ -348,7 +352,7 @@ GW passed through V1 -0.014733669757208141 seconds relative to passing by Hanfor
 </pre></div>
 </div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$ python ../examples/detector/ant.py
-fp=-0.3854854737104103, fc=0.7059872059706817
+fp=-0.385485475332, fc=0.705987205044
 </pre></div>
 </div>
 </div>

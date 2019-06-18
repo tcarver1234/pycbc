@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PyCBC inference documentation (pycbc.inference) &mdash; PyCBC 1.14.dev1 documentation</title>
+  <title>PyCBC inference documentation (pycbc.inference) &mdash; PyCBC da2640 documentation</title>
   
 
   
@@ -62,6 +62,10 @@
 
           
             
+            
+              <div class="version">
+                1.14.0
+              </div>
             
           
 
@@ -315,8 +319,32 @@ models are:</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>&#160;</td>
-<td>&#160;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'gaussian_noise'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.models.html#pycbc.inference.models.gaussian_noise.GaussianNoise" title="pycbc.inference.models.gaussian_noise.GaussianNoise"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.models.gaussian_noise.GaussianNoise</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'marginalized_gaussian_noise'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.models.html#pycbc.inference.models.marginalized_gaussian_noise.MarginalizedGaussianNoise" title="pycbc.inference.models.marginalized_gaussian_noise.MarginalizedGaussianNoise"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.models.marginalized_gaussian_noise.MarginalizedGaussianNoise</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'marginalized_phase'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.models.html#pycbc.inference.models.marginalized_gaussian_noise.MarginalizedPhaseGaussianNoise" title="pycbc.inference.models.marginalized_gaussian_noise.MarginalizedPhaseGaussianNoise"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.models.marginalized_gaussian_noise.MarginalizedPhaseGaussianNoise</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'single_template'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.models.html#pycbc.inference.models.single_template.SingleTemplate" title="pycbc.inference.models.single_template.SingleTemplate"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.models.single_template.SingleTemplate</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'test_eggbox'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.models.html#pycbc.inference.models.analytic.TestEggbox" title="pycbc.inference.models.analytic.TestEggbox"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.models.analytic.TestEggbox</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'test_normal'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.models.html#pycbc.inference.models.analytic.TestNormal" title="pycbc.inference.models.analytic.TestNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.models.analytic.TestNormal</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'test_prior'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.models.html#pycbc.inference.models.analytic.TestPrior" title="pycbc.inference.models.analytic.TestPrior"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.models.analytic.TestPrior</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'test_rosenbrock'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.models.html#pycbc.inference.models.analytic.TestRosenbrock" title="pycbc.inference.models.analytic.TestRosenbrock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.models.analytic.TestRosenbrock</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'test_volcano'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.models.html#pycbc.inference.models.analytic.TestVolcano" title="pycbc.inference.models.analytic.TestVolcano"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.models.analytic.TestVolcano</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -342,8 +370,14 @@ sampler to use. The currently available samplers are:</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>&#160;</td>
-<td>&#160;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'emcee'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.sampler.html#pycbc.inference.sampler.emcee.EmceeEnsembleSampler" title="pycbc.inference.sampler.emcee.EmceeEnsembleSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.sampler.emcee.EmceeEnsembleSampler</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'emcee_pt'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.sampler.html#pycbc.inference.sampler.emcee_pt.EmceePTSampler" title="pycbc.inference.sampler.emcee_pt.EmceePTSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.sampler.emcee_pt.EmceePTSampler</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'multinest'</span></code></td>
+<td><a class="reference internal" href="pycbc.inference.sampler.html#pycbc.inference.sampler.multinest.MultinestSampler" title="pycbc.inference.sampler.multinest.MultinestSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.inference.sampler.multinest.MultinestSampler</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -464,8 +498,47 @@ are:</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>&#160;</td>
-<td>&#160;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'arbitrary'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.arbitrary.Arbitrary" title="pycbc.distributions.arbitrary.Arbitrary"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.arbitrary.Arbitrary</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'cos_angle'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.angular.CosAngle" title="pycbc.distributions.angular.CosAngle"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.angular.CosAngle</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'fromfile'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.arbitrary.FromFile" title="pycbc.distributions.arbitrary.FromFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.arbitrary.FromFile</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'gaussian'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.gaussian.Gaussian" title="pycbc.distributions.gaussian.Gaussian"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.gaussian.Gaussian</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'independent_chip_chieff'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.spins.IndependentChiPChiEff" title="pycbc.distributions.spins.IndependentChiPChiEff"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.spins.IndependentChiPChiEff</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'sin_angle'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.angular.SinAngle" title="pycbc.distributions.angular.SinAngle"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.angular.SinAngle</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'uniform'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.uniform.Uniform" title="pycbc.distributions.uniform.Uniform"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.uniform.Uniform</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'uniform_angle'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.angular.UniformAngle" title="pycbc.distributions.angular.UniformAngle"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.angular.UniformAngle</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'uniform_f0_tau'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.qnm.UniformF0Tau" title="pycbc.distributions.qnm.UniformF0Tau"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.qnm.UniformF0Tau</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'uniform_log10'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.uniform_log.UniformLog10" title="pycbc.distributions.uniform_log.UniformLog10"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.uniform_log.UniformLog10</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'uniform_power_law'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.power_law.UniformPowerLaw" title="pycbc.distributions.power_law.UniformPowerLaw"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.power_law.UniformPowerLaw</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'uniform_radius'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.power_law.UniformRadius" title="pycbc.distributions.power_law.UniformRadius"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.power_law.UniformRadius</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'uniform_sky'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.sky_location.UniformSky" title="pycbc.distributions.sky_location.UniformSky"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.sky_location.UniformSky</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'uniform_solidangle'</span></code></td>
+<td><a class="reference internal" href="pycbc.distributions.html#pycbc.distributions.angular.UniformSolidAngle" title="pycbc.distributions.angular.UniformSolidAngle"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.distributions.angular.UniformSolidAngle</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -515,8 +588,62 @@ available transforms are:</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>&#160;</td>
-<td>&#160;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'aligned_mass_spin_to_cartesian_spin'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.AlignedMassSpinToCartesianSpin" title="pycbc.transforms.AlignedMassSpinToCartesianSpin"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.AlignedMassSpinToCartesianSpin</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'cartesian_spin_1_to_spherical_spin_1'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.CartesianSpin1ToSphericalSpin1" title="pycbc.transforms.CartesianSpin1ToSphericalSpin1"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.CartesianSpin1ToSphericalSpin1</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'cartesian_spin_2_to_spherical_spin_2'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.CartesianSpin2ToSphericalSpin2" title="pycbc.transforms.CartesianSpin2ToSphericalSpin2"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.CartesianSpin2ToSphericalSpin2</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'cartesian_spin_to_aligned_mass_spin'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.CartesianSpinToAlignedMassSpin" title="pycbc.transforms.CartesianSpinToAlignedMassSpin"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.CartesianSpinToAlignedMassSpin</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'cartesian_spin_to_chi_p'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.CartesianSpinToChiP" title="pycbc.transforms.CartesianSpinToChiP"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.CartesianSpinToChiP</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'cartesian_spin_to_precession_mass_spin'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.CartesianSpinToPrecessionMassSpin" title="pycbc.transforms.CartesianSpinToPrecessionMassSpin"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.CartesianSpinToPrecessionMassSpin</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'chirp_distance_to_distance'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.ChirpDistanceToDistance" title="pycbc.transforms.ChirpDistanceToDistance"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.ChirpDistanceToDistance</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'custom'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.CustomTransform" title="pycbc.transforms.CustomTransform"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.CustomTransform</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'distance_to_chirp_distance'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.DistanceToChirpDistance" title="pycbc.transforms.DistanceToChirpDistance"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.DistanceToChirpDistance</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'distance_to_redshift'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.DistanceToRedshift" title="pycbc.transforms.DistanceToRedshift"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.DistanceToRedshift</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'lambda_from_tov_file'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.LambdaFromTOVFile" title="pycbc.transforms.LambdaFromTOVFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.LambdaFromTOVFile</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'logistic'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.Logistic" title="pycbc.transforms.Logistic"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.Logistic</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'logit'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.Logit" title="pycbc.transforms.Logit"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.Logit</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'mass1_mass2_to_mchirp_eta'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.Mass1Mass2ToMchirpEta" title="pycbc.transforms.Mass1Mass2ToMchirpEta"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.Mass1Mass2ToMchirpEta</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'mass1_mass2_to_mchirp_q'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.Mass1Mass2ToMchirpQ" title="pycbc.transforms.Mass1Mass2ToMchirpQ"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.Mass1Mass2ToMchirpQ</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'mchirp_q_to_mass1_mass2'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.MchirpQToMass1Mass2" title="pycbc.transforms.MchirpQToMass1Mass2"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.MchirpQToMass1Mass2</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'precession_mass_spin_to_cartesian_spin'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.PrecessionMassSpinToCartesianSpin" title="pycbc.transforms.PrecessionMassSpinToCartesianSpin"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.PrecessionMassSpinToCartesianSpin</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'spherical_spin_1_to_cartesian_spin_1'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.SphericalSpin1ToCartesianSpin1" title="pycbc.transforms.SphericalSpin1ToCartesianSpin1"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.SphericalSpin1ToCartesianSpin1</span></code></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'spherical_spin_2_to_cartesian_spin_2'</span></code></td>
+<td><a class="reference internal" href="pycbc.html#pycbc.transforms.SphericalSpin2ToCartesianSpin2" title="pycbc.transforms.SphericalSpin2ToCartesianSpin2"><code class="xref py py-class docutils literal notranslate"><span class="pre">pycbc.transforms.SphericalSpin2ToCartesianSpin2</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -547,8 +674,140 @@ by the CBC waveform generators are:</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>&#160;</td>
-<td>&#160;</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'mass1'</span></code></td>
+<td>The mass of the first component object in the binary (in solar masses).</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'mass2'</span></code></td>
+<td>The mass of the second component object in the binary (in solar masses).</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'spin1x'</span></code></td>
+<td>The x component of the first binary component’s dimensionless spin.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'spin1y'</span></code></td>
+<td>The y component of the first binary component’s dimensionless spin.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'spin1z'</span></code></td>
+<td>The z component of the first binary component’s dimensionless spin.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'spin2x'</span></code></td>
+<td>The x component of the second binary component’s dimensionless spin.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'spin2y'</span></code></td>
+<td>The y component of the second binary component’s dimensionless spin.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'spin2z'</span></code></td>
+<td>The z component of the second binary component’s dimensionless spin.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'eccentricity'</span></code></td>
+<td>Eccentricity.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'lambda1'</span></code></td>
+<td>The dimensionless tidal deformability parameter of object 1.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'lambda2'</span></code></td>
+<td>The dimensionless tidal deformability parameter of object 2.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'dquad_mon1'</span></code></td>
+<td>Quadrupole-monopole parameter / m_1^5 -1.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'dquad_mon2'</span></code></td>
+<td>Quadrupole-monopole parameter / m_2^5 -1.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'lambda_octu1'</span></code></td>
+<td>The octupolar tidal deformability parameter of object 1.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'lambda_octu2'</span></code></td>
+<td>The octupolar tidal deformability parameter of object 2.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'quadfmode1'</span></code></td>
+<td>The quadrupolar f-mode angular frequency of object 1.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'quadfmode2'</span></code></td>
+<td>The quadrupolar f-mode angular frequency of object 2.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'octufmode1'</span></code></td>
+<td>The octupolar f-mode angular frequency of object 1.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'octufmode2'</span></code></td>
+<td>The octupolar f-mode angular frequency of object 2.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'distance'</span></code></td>
+<td>Luminosity distance to the binary (in Mpc).</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'coa_phase'</span></code></td>
+<td>Coalesence phase of the binary (in rad).</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'inclination'</span></code></td>
+<td>Inclination (rad), defined as the angle between the total angular momentum J and the line-of-sight.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'long_asc_nodes'</span></code></td>
+<td>Longitude of ascending nodes axis (rad).</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'mean_per_ano'</span></code></td>
+<td>Mean anomaly of the periastron (rad).</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'delta_t'</span></code></td>
+<td>The time step used to generate the waveform (in s).</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'f_lower'</span></code></td>
+<td>The starting frequency of the waveform (in Hz).</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'approximant'</span></code></td>
+<td>A string that indicates the chosen approximant.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'f_ref'</span></code></td>
+<td>The reference frequency.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'phase_order'</span></code></td>
+<td>The pN order of the orbital phase. The default of -1 indicates that all implemented orders are used.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'spin_order'</span></code></td>
+<td>The pN order of the spin corrections. The default of -1 indicates that all implemented orders are used.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'tidal_order'</span></code></td>
+<td>The pN order of the tidal corrections. The default of -1 indicates that all implemented orders are used.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'amplitude_order'</span></code></td>
+<td>The pN order of the amplitude. The default of -1 indicates that all implemented orders are used.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'eccentricity_order'</span></code></td>
+<td>The pN order of the eccentricity corrections.The default of -1 indicates that all implemented orders are used.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'frame_axis'</span></code></td>
+<td>Allow to choose among orbital_l, view and total_j</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'modes_choice'</span></code></td>
+<td>Allow to turn on  among orbital_l, view and total_j</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'side_bands'</span></code></td>
+<td>Flag for generating sidebands</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'mode_array'</span></code></td>
+<td>Choose which (l,m) modes to include when generating a waveform. Only if approximant supports this feature.By default pass None and let lalsimulation use it’s default behaviour.Example: mode_array = [ [2,2], [2,-2] ]</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'numrel_data'</span></code></td>
+<td>Sets the NR flags; only needed for NR waveforms.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'delta_f'</span></code></td>
+<td>The frequency step used to generate the waveform (in Hz).</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'f_final'</span></code></td>
+<td>The ending frequency of the waveform. The default (0) indicates that the choice is made by the respective approximant.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'f_final_func'</span></code></td>
+<td>Use the given frequency function to compute f_final based on the parameters of the waveform.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'tc'</span></code></td>
+<td>Coalescence time (s).</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'ra'</span></code></td>
+<td>Right ascension (rad).</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'dec'</span></code></td>
+<td>Declination (rad).</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">'polarization'</span></code></td>
+<td>Polarization (rad).</td>
 </tr>
 </tbody>
 </table>
