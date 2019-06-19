@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pycbc.waveform package &mdash; PyCBC 020e34 documentation</title>
+  <title>pycbc.waveform package &mdash; PyCBC 1.14.dev1 documentation</title>
   
 
   
@@ -61,10 +61,6 @@
 
           
             
-            
-              <div class="version">
-                1.14.0
-              </div>
             
           
 
@@ -299,12 +295,12 @@ read in from the bank.</p>
 
 <dl class="method">
 <dt id="pycbc.waveform.bank.LIGOLWContentHandler.startStream">
-<code class="descname">startStream</code><span class="sig-paren">(</span><em>parent</em>, <em>attrs</em>, <em>__orig_startStream=&lt;unbound method LIGOLWContentHandler.startStream&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#pycbc.waveform.bank.LIGOLWContentHandler.startStream" title="Permalink to this definition">¶</a></dt>
+<code class="descname">startStream</code><span class="sig-paren">(</span><em>parent</em>, <em>attrs</em>, <em>__orig_startStream=&lt;function LIGOLWContentHandler.startStream&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#pycbc.waveform.bank.LIGOLWContentHandler.startStream" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pycbc.waveform.bank.LIGOLWContentHandler.startTable">
-<code class="descname">startTable</code><span class="sig-paren">(</span><em>parent</em>, <em>attrs</em>, <em>__orig_startTable=&lt;unbound method LIGOLWContentHandler.startTable&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#pycbc.waveform.bank.LIGOLWContentHandler.startTable" title="Permalink to this definition">¶</a></dt>
+<code class="descname">startTable</code><span class="sig-paren">(</span><em>parent</em>, <em>attrs</em>, <em>__orig_startTable=&lt;function use_in.&lt;locals&gt;.startTable&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#pycbc.waveform.bank.LIGOLWContentHandler.startTable" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1234,7 +1230,7 @@ or <cite>frozen_params</cite>.</p>
 
 <dl class="attribute">
 <dt>
-<code class="descname">possible_args</code><em class="property"> = set(['amplitude_order', 'approximant', 'coa_phase', 'delta_f', 'delta_t', 'distance', 'dquad_mon1', 'dquad_mon2', 'eccentricity', 'eccentricity_order', 'f_final', 'f_final_func', 'f_lower', 'f_ref', 'frame_axis', 'inclination', 'lambda1', 'lambda2', 'lambda_octu1', 'lambda_octu2', 'long_asc_nodes', 'mass1', 'mass2', 'mean_per_ano', 'mode_array', 'modes_choice', 'numrel_data', 'octufmode1', 'octufmode2', 'phase_order', 'quadfmode1', 'quadfmode2', 'side_bands', 'spin1x', 'spin1y', 'spin1z', 'spin2x', 'spin2y', 'spin2z', 'spin_order', 'taper', 'tidal_order'])</em></dt>
+<code class="descname">possible_args</code><em class="property"> = {'amplitude_order', 'approximant', 'coa_phase', 'delta_f', 'delta_t', 'distance', 'dquad_mon1', 'dquad_mon2', 'eccentricity', 'eccentricity_order', 'f_final', 'f_final_func', 'f_lower', 'f_ref', 'frame_axis', 'inclination', 'lambda1', 'lambda2', 'lambda_octu1', 'lambda_octu2', 'long_asc_nodes', 'mass1', 'mass2', 'mean_per_ano', 'mode_array', 'modes_choice', 'numrel_data', 'octufmode1', 'octufmode2', 'phase_order', 'quadfmode1', 'quadfmode2', 'side_bands', 'spin1x', 'spin1y', 'spin1z', 'spin2x', 'spin2y', 'spin2z', 'spin_order', 'taper', 'tidal_order'}</em></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1602,7 +1598,7 @@ function from the given args.</p>
 
 <dl class="attribute">
 <dt>
-<code class="descname">location_args</code><em class="property"> = set(['dec', 'polarization', 'ra', 'tc'])</em></dt>
+<code class="descname">location_args</code><em class="property"> = {'dec', 'polarization', 'ra', 'tc'}</em></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1851,7 +1847,7 @@ sub-classing string, adding additional attributes.</p>
 <dl class="class">
 <dt id="pycbc.waveform.parameters.ParameterList">
 <em class="property">class </em><code class="descclassname">pycbc.waveform.parameters.</code><code class="descname">ParameterList</code><span class="sig-paren">(</span><em>initlist=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pycbc/waveform/parameters.html#ParameterList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pycbc.waveform.parameters.ParameterList" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">UserList.UserList</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.UserList" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.UserList</span></code></a></p>
 <p>A list of parameters. Each element in the list is expected to be a
 Parameter instance.</p>
 <dl class="attribute">
@@ -2888,44 +2884,44 @@ waveforms.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>template</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><em>object</em></a>) – An object that has attached properties. This can be used to subsitute
 for keyword arguments. A common example would be a row in an xml table.</li>
-<li><strong>mass1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The mass of the first component object in the binary (in solar masses).</li>
-<li><strong>mass2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The mass of the second component object in the binary (in solar masses).</li>
-<li><strong>spin1x</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The x component of the first binary component’s dimensionless spin.</li>
-<li><strong>spin1y</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The y component of the first binary component’s dimensionless spin.</li>
-<li><strong>spin1z</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The z component of the first binary component’s dimensionless spin.</li>
-<li><strong>spin2x</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The x component of the second binary component’s dimensionless spin.</li>
-<li><strong>spin2y</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The y component of the second binary component’s dimensionless spin.</li>
-<li><strong>spin2z</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The z component of the second binary component’s dimensionless spin.</li>
-<li><strong>eccentricity</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Eccentricity.</li>
-<li><strong>lambda1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The dimensionless tidal deformability parameter of object 1.</li>
-<li><strong>lambda2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The dimensionless tidal deformability parameter of object 2.</li>
-<li><strong>dquad_mon1</strong> (<em>{None</em><em>, </em><em>float}</em>) – Quadrupole-monopole parameter / m_1^5 -1.</li>
-<li><strong>dquad_mon2</strong> (<em>{None</em><em>, </em><em>float}</em>) – Quadrupole-monopole parameter / m_2^5 -1.</li>
-<li><strong>lambda_octu1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar tidal deformability parameter of object 1.</li>
-<li><strong>lambda_octu2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar tidal deformability parameter of object 2.</li>
-<li><strong>quadfmode1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The quadrupolar f-mode angular frequency of object 1.</li>
-<li><strong>quadfmode2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The quadrupolar f-mode angular frequency of object 2.</li>
-<li><strong>octufmode1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar f-mode angular frequency of object 1.</li>
-<li><strong>octufmode2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar f-mode angular frequency of object 2.</li>
-<li><strong>distance</strong> (<em>{1.0</em><em>, </em><em>float}</em>) – Luminosity distance to the binary (in Mpc).</li>
-<li><strong>coa_phase</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Coalesence phase of the binary (in rad).</li>
-<li><strong>inclination</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Inclination (rad), defined as the angle between the total angular momentum J and the line-of-sight.</li>
-<li><strong>long_asc_nodes</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Longitude of ascending nodes axis (rad).</li>
-<li><strong>mean_per_ano</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Mean anomaly of the periastron (rad).</li>
-<li><strong>delta_t</strong> (<em>{None</em><em>, </em><em>float}</em>) – The time step used to generate the waveform (in s).</li>
-<li><strong>f_lower</strong> (<em>{None</em><em>, </em><em>float}</em>) – The starting frequency of the waveform (in Hz).</li>
-<li><strong>approximant</strong> (<em>{None</em><em>, </em><em>str}</em>) – A string that indicates the chosen approximant.</li>
-<li><strong>f_ref</strong> (<em>{0</em><em>, </em><em>float}</em>) – The reference frequency.</li>
-<li><strong>phase_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the orbital phase. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>spin_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the spin corrections. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>tidal_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the tidal corrections. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>amplitude_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the amplitude. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>eccentricity_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the eccentricity corrections.The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>frame_axis</strong> (<em>{0</em><em>, </em><em>int}</em>) – Allow to choose among orbital_l, view and total_j</li>
-<li><strong>modes_choice</strong> (<em>{0</em><em>, </em><em>int}</em>) – Allow to turn on  among orbital_l, view and total_j</li>
-<li><strong>side_bands</strong> (<em>{0</em><em>, </em><em>int}</em>) – Flag for generating sidebands</li>
-<li><strong>mode_array</strong> (<em>{None</em><em>, </em><em>list}</em>) – Choose which (l,m) modes to include when generating a waveform. Only if approximant supports this feature.By default pass None and let lalsimulation use it’s default behaviour.Example: mode_array = [ [2,2], [2,-2] ]</li>
-<li><strong>numrel_data</strong> (<em>{</em><em>, </em><em>str}</em>) – Sets the NR flags; only needed for NR waveforms.</li>
+<li><strong>mass1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The mass of the first component object in the binary (in solar masses).</li>
+<li><strong>mass2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The mass of the second component object in the binary (in solar masses).</li>
+<li><strong>spin1x</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The x component of the first binary component’s dimensionless spin.</li>
+<li><strong>spin1y</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The y component of the first binary component’s dimensionless spin.</li>
+<li><strong>spin1z</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The z component of the first binary component’s dimensionless spin.</li>
+<li><strong>spin2x</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The x component of the second binary component’s dimensionless spin.</li>
+<li><strong>spin2y</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The y component of the second binary component’s dimensionless spin.</li>
+<li><strong>spin2z</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The z component of the second binary component’s dimensionless spin.</li>
+<li><strong>eccentricity</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Eccentricity.</li>
+<li><strong>lambda1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The dimensionless tidal deformability parameter of object 1.</li>
+<li><strong>lambda2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The dimensionless tidal deformability parameter of object 2.</li>
+<li><strong>dquad_mon1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – Quadrupole-monopole parameter / m_1^5 -1.</li>
+<li><strong>dquad_mon2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – Quadrupole-monopole parameter / m_2^5 -1.</li>
+<li><strong>lambda_octu1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar tidal deformability parameter of object 1.</li>
+<li><strong>lambda_octu2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar tidal deformability parameter of object 2.</li>
+<li><strong>quadfmode1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The quadrupolar f-mode angular frequency of object 1.</li>
+<li><strong>quadfmode2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The quadrupolar f-mode angular frequency of object 2.</li>
+<li><strong>octufmode1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar f-mode angular frequency of object 1.</li>
+<li><strong>octufmode2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar f-mode angular frequency of object 2.</li>
+<li><strong>distance</strong> (<em>{1.0</em><em>, </em><em>&lt;class 'float}</em>) – Luminosity distance to the binary (in Mpc).</li>
+<li><strong>coa_phase</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Coalesence phase of the binary (in rad).</li>
+<li><strong>inclination</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Inclination (rad), defined as the angle between the total angular momentum J and the line-of-sight.</li>
+<li><strong>long_asc_nodes</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Longitude of ascending nodes axis (rad).</li>
+<li><strong>mean_per_ano</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Mean anomaly of the periastron (rad).</li>
+<li><strong>delta_t</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The time step used to generate the waveform (in s).</li>
+<li><strong>f_lower</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The starting frequency of the waveform (in Hz).</li>
+<li><strong>approximant</strong> (<em>{None</em><em>, </em><em>&lt;class 'str}</em>) – A string that indicates the chosen approximant.</li>
+<li><strong>f_ref</strong> (<em>{0</em><em>, </em><em>&lt;class 'float}</em>) – The reference frequency.</li>
+<li><strong>phase_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the orbital phase. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>spin_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the spin corrections. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>tidal_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the tidal corrections. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>amplitude_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the amplitude. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>eccentricity_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the eccentricity corrections.The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>frame_axis</strong> (<em>{0</em><em>, </em><em>&lt;class 'int}</em>) – Allow to choose among orbital_l, view and total_j</li>
+<li><strong>modes_choice</strong> (<em>{0</em><em>, </em><em>&lt;class 'int}</em>) – Allow to turn on  among orbital_l, view and total_j</li>
+<li><strong>side_bands</strong> (<em>{0</em><em>, </em><em>&lt;class 'int}</em>) – Flag for generating sidebands</li>
+<li><strong>mode_array</strong> (<em>{None</em><em>, </em><em>&lt;class 'list}</em>) – Choose which (l,m) modes to include when generating a waveform. Only if approximant supports this feature.By default pass None and let lalsimulation use it’s default behaviour.Example: mode_array = [ [2,2], [2,-2] ]</li>
+<li><strong>numrel_data</strong> (<em>{</em><em>, </em><em>&lt;class 'str}</em>) – Sets the NR flags; only needed for NR waveforms.</li>
 <li><strong>frame_axis</strong> – Allow to choose among orbital_l, view and total_j</li>
 <li><strong>modes_choice</strong> – Allow to turn on  among orbital_l, view and total_j</li>
 <li><strong>side_bands</strong> – Flag for generating sidebands</li>
@@ -2955,45 +2951,45 @@ for keyword arguments. A common example would be a row in an xml table.</li>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>template</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><em>object</em></a>) – An object that has attached properties. This can be used to substitute
 for keyword arguments. A common example would be a row in an xml table.</li>
-<li><strong>mass1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The mass of the first component object in the binary (in solar masses).</li>
-<li><strong>mass2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The mass of the second component object in the binary (in solar masses).</li>
-<li><strong>spin1x</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The x component of the first binary component’s dimensionless spin.</li>
-<li><strong>spin1y</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The y component of the first binary component’s dimensionless spin.</li>
-<li><strong>spin1z</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The z component of the first binary component’s dimensionless spin.</li>
-<li><strong>spin2x</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The x component of the second binary component’s dimensionless spin.</li>
-<li><strong>spin2y</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The y component of the second binary component’s dimensionless spin.</li>
-<li><strong>spin2z</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The z component of the second binary component’s dimensionless spin.</li>
-<li><strong>eccentricity</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Eccentricity.</li>
-<li><strong>lambda1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The dimensionless tidal deformability parameter of object 1.</li>
-<li><strong>lambda2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The dimensionless tidal deformability parameter of object 2.</li>
-<li><strong>dquad_mon1</strong> (<em>{None</em><em>, </em><em>float}</em>) – Quadrupole-monopole parameter / m_1^5 -1.</li>
-<li><strong>dquad_mon2</strong> (<em>{None</em><em>, </em><em>float}</em>) – Quadrupole-monopole parameter / m_2^5 -1.</li>
-<li><strong>lambda_octu1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar tidal deformability parameter of object 1.</li>
-<li><strong>lambda_octu2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar tidal deformability parameter of object 2.</li>
-<li><strong>quadfmode1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The quadrupolar f-mode angular frequency of object 1.</li>
-<li><strong>quadfmode2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The quadrupolar f-mode angular frequency of object 2.</li>
-<li><strong>octufmode1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar f-mode angular frequency of object 1.</li>
-<li><strong>octufmode2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar f-mode angular frequency of object 2.</li>
-<li><strong>distance</strong> (<em>{1.0</em><em>, </em><em>float}</em>) – Luminosity distance to the binary (in Mpc).</li>
-<li><strong>coa_phase</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Coalesence phase of the binary (in rad).</li>
-<li><strong>inclination</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Inclination (rad), defined as the angle between the total angular momentum J and the line-of-sight.</li>
-<li><strong>long_asc_nodes</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Longitude of ascending nodes axis (rad).</li>
-<li><strong>mean_per_ano</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Mean anomaly of the periastron (rad).</li>
-<li><strong>delta_f</strong> (<em>{None</em><em>, </em><em>float}</em>) – The frequency step used to generate the waveform (in Hz).</li>
-<li><strong>f_lower</strong> (<em>{None</em><em>, </em><em>float}</em>) – The starting frequency of the waveform (in Hz).</li>
-<li><strong>approximant</strong> (<em>{None</em><em>, </em><em>str}</em>) – A string that indicates the chosen approximant.</li>
-<li><strong>f_ref</strong> (<em>{0</em><em>, </em><em>float}</em>) – The reference frequency.</li>
-<li><strong>phase_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the orbital phase. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>spin_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the spin corrections. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>tidal_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the tidal corrections. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>amplitude_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the amplitude. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>eccentricity_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the eccentricity corrections.The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>frame_axis</strong> (<em>{0</em><em>, </em><em>int}</em>) – Allow to choose among orbital_l, view and total_j</li>
-<li><strong>modes_choice</strong> (<em>{0</em><em>, </em><em>int}</em>) – Allow to turn on  among orbital_l, view and total_j</li>
-<li><strong>side_bands</strong> (<em>{0</em><em>, </em><em>int}</em>) – Flag for generating sidebands</li>
-<li><strong>mode_array</strong> (<em>{None</em><em>, </em><em>list}</em>) – Choose which (l,m) modes to include when generating a waveform. Only if approximant supports this feature.By default pass None and let lalsimulation use it’s default behaviour.Example: mode_array = [ [2,2], [2,-2] ]</li>
-<li><strong>f_final</strong> (<em>{0</em><em>, </em><em>float}</em>) – The ending frequency of the waveform. The default (0) indicates that the choice is made by the respective approximant.</li>
-<li><strong>f_final_func</strong> (<em>{</em><em>, </em><em>str}</em>) – Use the given frequency function to compute f_final based on the parameters of the waveform.</li>
+<li><strong>mass1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The mass of the first component object in the binary (in solar masses).</li>
+<li><strong>mass2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The mass of the second component object in the binary (in solar masses).</li>
+<li><strong>spin1x</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The x component of the first binary component’s dimensionless spin.</li>
+<li><strong>spin1y</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The y component of the first binary component’s dimensionless spin.</li>
+<li><strong>spin1z</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The z component of the first binary component’s dimensionless spin.</li>
+<li><strong>spin2x</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The x component of the second binary component’s dimensionless spin.</li>
+<li><strong>spin2y</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The y component of the second binary component’s dimensionless spin.</li>
+<li><strong>spin2z</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The z component of the second binary component’s dimensionless spin.</li>
+<li><strong>eccentricity</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Eccentricity.</li>
+<li><strong>lambda1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The dimensionless tidal deformability parameter of object 1.</li>
+<li><strong>lambda2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The dimensionless tidal deformability parameter of object 2.</li>
+<li><strong>dquad_mon1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – Quadrupole-monopole parameter / m_1^5 -1.</li>
+<li><strong>dquad_mon2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – Quadrupole-monopole parameter / m_2^5 -1.</li>
+<li><strong>lambda_octu1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar tidal deformability parameter of object 1.</li>
+<li><strong>lambda_octu2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar tidal deformability parameter of object 2.</li>
+<li><strong>quadfmode1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The quadrupolar f-mode angular frequency of object 1.</li>
+<li><strong>quadfmode2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The quadrupolar f-mode angular frequency of object 2.</li>
+<li><strong>octufmode1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar f-mode angular frequency of object 1.</li>
+<li><strong>octufmode2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar f-mode angular frequency of object 2.</li>
+<li><strong>distance</strong> (<em>{1.0</em><em>, </em><em>&lt;class 'float}</em>) – Luminosity distance to the binary (in Mpc).</li>
+<li><strong>coa_phase</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Coalesence phase of the binary (in rad).</li>
+<li><strong>inclination</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Inclination (rad), defined as the angle between the total angular momentum J and the line-of-sight.</li>
+<li><strong>long_asc_nodes</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Longitude of ascending nodes axis (rad).</li>
+<li><strong>mean_per_ano</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Mean anomaly of the periastron (rad).</li>
+<li><strong>delta_f</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The frequency step used to generate the waveform (in Hz).</li>
+<li><strong>f_lower</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The starting frequency of the waveform (in Hz).</li>
+<li><strong>approximant</strong> (<em>{None</em><em>, </em><em>&lt;class 'str}</em>) – A string that indicates the chosen approximant.</li>
+<li><strong>f_ref</strong> (<em>{0</em><em>, </em><em>&lt;class 'float}</em>) – The reference frequency.</li>
+<li><strong>phase_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the orbital phase. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>spin_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the spin corrections. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>tidal_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the tidal corrections. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>amplitude_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the amplitude. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>eccentricity_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the eccentricity corrections.The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>frame_axis</strong> (<em>{0</em><em>, </em><em>&lt;class 'int}</em>) – Allow to choose among orbital_l, view and total_j</li>
+<li><strong>modes_choice</strong> (<em>{0</em><em>, </em><em>&lt;class 'int}</em>) – Allow to turn on  among orbital_l, view and total_j</li>
+<li><strong>side_bands</strong> (<em>{0</em><em>, </em><em>&lt;class 'int}</em>) – Flag for generating sidebands</li>
+<li><strong>mode_array</strong> (<em>{None</em><em>, </em><em>&lt;class 'list}</em>) – Choose which (l,m) modes to include when generating a waveform. Only if approximant supports this feature.By default pass None and let lalsimulation use it’s default behaviour.Example: mode_array = [ [2,2], [2,-2] ]</li>
+<li><strong>f_final</strong> (<em>{0</em><em>, </em><em>&lt;class 'float}</em>) – The ending frequency of the waveform. The default (0) indicates that the choice is made by the respective approximant.</li>
+<li><strong>f_final_func</strong> (<em>{</em><em>, </em><em>&lt;class 'str}</em>) – Use the given frequency function to compute f_final based on the parameters of the waveform.</li>
 </ul>
 </td>
 </tr>
@@ -3020,42 +3016,42 @@ points.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>template</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><em>object</em></a>) – An object that has attached properties. This can be used to substitute
 for keyword arguments. A common example would be a row in an xml table.</li>
-<li><strong>mass1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The mass of the first component object in the binary (in solar masses).</li>
-<li><strong>mass2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The mass of the second component object in the binary (in solar masses).</li>
-<li><strong>spin1x</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The x component of the first binary component’s dimensionless spin.</li>
-<li><strong>spin1y</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The y component of the first binary component’s dimensionless spin.</li>
-<li><strong>spin1z</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The z component of the first binary component’s dimensionless spin.</li>
-<li><strong>spin2x</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The x component of the second binary component’s dimensionless spin.</li>
-<li><strong>spin2y</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The y component of the second binary component’s dimensionless spin.</li>
-<li><strong>spin2z</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – The z component of the second binary component’s dimensionless spin.</li>
-<li><strong>eccentricity</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Eccentricity.</li>
-<li><strong>lambda1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The dimensionless tidal deformability parameter of object 1.</li>
-<li><strong>lambda2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The dimensionless tidal deformability parameter of object 2.</li>
-<li><strong>dquad_mon1</strong> (<em>{None</em><em>, </em><em>float}</em>) – Quadrupole-monopole parameter / m_1^5 -1.</li>
-<li><strong>dquad_mon2</strong> (<em>{None</em><em>, </em><em>float}</em>) – Quadrupole-monopole parameter / m_2^5 -1.</li>
-<li><strong>lambda_octu1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar tidal deformability parameter of object 1.</li>
-<li><strong>lambda_octu2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar tidal deformability parameter of object 2.</li>
-<li><strong>quadfmode1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The quadrupolar f-mode angular frequency of object 1.</li>
-<li><strong>quadfmode2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The quadrupolar f-mode angular frequency of object 2.</li>
-<li><strong>octufmode1</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar f-mode angular frequency of object 1.</li>
-<li><strong>octufmode2</strong> (<em>{None</em><em>, </em><em>float}</em>) – The octupolar f-mode angular frequency of object 2.</li>
-<li><strong>distance</strong> (<em>{1.0</em><em>, </em><em>float}</em>) – Luminosity distance to the binary (in Mpc).</li>
-<li><strong>coa_phase</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Coalesence phase of the binary (in rad).</li>
-<li><strong>inclination</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Inclination (rad), defined as the angle between the total angular momentum J and the line-of-sight.</li>
-<li><strong>long_asc_nodes</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Longitude of ascending nodes axis (rad).</li>
-<li><strong>mean_per_ano</strong> (<em>{0.0</em><em>, </em><em>float}</em>) – Mean anomaly of the periastron (rad).</li>
+<li><strong>mass1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The mass of the first component object in the binary (in solar masses).</li>
+<li><strong>mass2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The mass of the second component object in the binary (in solar masses).</li>
+<li><strong>spin1x</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The x component of the first binary component’s dimensionless spin.</li>
+<li><strong>spin1y</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The y component of the first binary component’s dimensionless spin.</li>
+<li><strong>spin1z</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The z component of the first binary component’s dimensionless spin.</li>
+<li><strong>spin2x</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The x component of the second binary component’s dimensionless spin.</li>
+<li><strong>spin2y</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The y component of the second binary component’s dimensionless spin.</li>
+<li><strong>spin2z</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – The z component of the second binary component’s dimensionless spin.</li>
+<li><strong>eccentricity</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Eccentricity.</li>
+<li><strong>lambda1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The dimensionless tidal deformability parameter of object 1.</li>
+<li><strong>lambda2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The dimensionless tidal deformability parameter of object 2.</li>
+<li><strong>dquad_mon1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – Quadrupole-monopole parameter / m_1^5 -1.</li>
+<li><strong>dquad_mon2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – Quadrupole-monopole parameter / m_2^5 -1.</li>
+<li><strong>lambda_octu1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar tidal deformability parameter of object 1.</li>
+<li><strong>lambda_octu2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar tidal deformability parameter of object 2.</li>
+<li><strong>quadfmode1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The quadrupolar f-mode angular frequency of object 1.</li>
+<li><strong>quadfmode2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The quadrupolar f-mode angular frequency of object 2.</li>
+<li><strong>octufmode1</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar f-mode angular frequency of object 1.</li>
+<li><strong>octufmode2</strong> (<em>{None</em><em>, </em><em>&lt;class 'float}</em>) – The octupolar f-mode angular frequency of object 2.</li>
+<li><strong>distance</strong> (<em>{1.0</em><em>, </em><em>&lt;class 'float}</em>) – Luminosity distance to the binary (in Mpc).</li>
+<li><strong>coa_phase</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Coalesence phase of the binary (in rad).</li>
+<li><strong>inclination</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Inclination (rad), defined as the angle between the total angular momentum J and the line-of-sight.</li>
+<li><strong>long_asc_nodes</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Longitude of ascending nodes axis (rad).</li>
+<li><strong>mean_per_ano</strong> (<em>{0.0</em><em>, </em><em>&lt;class 'float}</em>) – Mean anomaly of the periastron (rad).</li>
 <li><strong>sample_points</strong> (<em>{None</em><em>, </em><em>Array}</em>) – An array of the frequencies (in Hz) at which to generate the waveform.</li>
-<li><strong>approximant</strong> (<em>{None</em><em>, </em><em>str}</em>) – A string that indicates the chosen approximant.</li>
-<li><strong>f_ref</strong> (<em>{0</em><em>, </em><em>float}</em>) – The reference frequency.</li>
-<li><strong>phase_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the orbital phase. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>spin_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the spin corrections. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>tidal_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the tidal corrections. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>amplitude_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the amplitude. The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>eccentricity_order</strong> (<em>{-1</em><em>, </em><em>int}</em>) – The pN order of the eccentricity corrections.The default of -1 indicates that all implemented orders are used.</li>
-<li><strong>frame_axis</strong> (<em>{0</em><em>, </em><em>int}</em>) – Allow to choose among orbital_l, view and total_j</li>
-<li><strong>modes_choice</strong> (<em>{0</em><em>, </em><em>int}</em>) – Allow to turn on  among orbital_l, view and total_j</li>
-<li><strong>side_bands</strong> (<em>{0</em><em>, </em><em>int}</em>) – Flag for generating sidebands</li>
-<li><strong>mode_array</strong> (<em>{None</em><em>, </em><em>list}</em>) – Choose which (l,m) modes to include when generating a waveform. Only if approximant supports this feature.By default pass None and let lalsimulation use it’s default behaviour.Example: mode_array = [ [2,2], [2,-2] ]</li>
+<li><strong>approximant</strong> (<em>{None</em><em>, </em><em>&lt;class 'str}</em>) – A string that indicates the chosen approximant.</li>
+<li><strong>f_ref</strong> (<em>{0</em><em>, </em><em>&lt;class 'float}</em>) – The reference frequency.</li>
+<li><strong>phase_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the orbital phase. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>spin_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the spin corrections. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>tidal_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the tidal corrections. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>amplitude_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the amplitude. The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>eccentricity_order</strong> (<em>{-1</em><em>, </em><em>&lt;class 'int}</em>) – The pN order of the eccentricity corrections.The default of -1 indicates that all implemented orders are used.</li>
+<li><strong>frame_axis</strong> (<em>{0</em><em>, </em><em>&lt;class 'int}</em>) – Allow to choose among orbital_l, view and total_j</li>
+<li><strong>modes_choice</strong> (<em>{0</em><em>, </em><em>&lt;class 'int}</em>) – Allow to turn on  among orbital_l, view and total_j</li>
+<li><strong>side_bands</strong> (<em>{0</em><em>, </em><em>&lt;class 'int}</em>) – Flag for generating sidebands</li>
+<li><strong>mode_array</strong> (<em>{None</em><em>, </em><em>&lt;class 'list}</em>) – Choose which (l,m) modes to include when generating a waveform. Only if approximant supports this feature.By default pass None and let lalsimulation use it’s default behaviour.Example: mode_array = [ [2,2], [2,-2] ]</li>
 </ul>
 </td>
 </tr>
@@ -3240,7 +3236,7 @@ and h_cross are not related by a simple phase shift.</p>
 <dl class="exception">
 <dt id="pycbc.waveform.waveform.NoWaveformError">
 <em class="property">exception </em><code class="descclassname">pycbc.waveform.waveform.</code><code class="descname">NoWaveformError</code><a class="reference internal" href="_modules/pycbc/waveform/waveform.html#NoWaveformError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pycbc.waveform.waveform.NoWaveformError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <p>This should be raised if generating a waveform would just result in all
 zeros being returned, e.g., if a requested <cite>f_final</cite> is &lt;= <cite>f_lower</cite>.</p>
 </dd></dl>
