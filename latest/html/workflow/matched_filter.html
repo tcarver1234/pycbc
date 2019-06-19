@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The workflow matched-filter module &mdash; PyCBC 1.14.dev1 documentation</title>
+  <title>The workflow matched-filter module &mdash; PyCBC e0dace documentation</title>
   
 
   
@@ -62,6 +62,10 @@
 
           
             
+            
+              <div class="version">
+                1.14.0
+              </div>
             
           
 
@@ -548,7 +552,7 @@ optional arguments:
   --keep-loudest-num KEEP_LOUDEST_NUM
                         Number of triggers to keep from each maximization
                         interval
-  --keep-loudest-stat {newsnr,new_snr,snr,newsnr_cut,exp_fit_csnr,exp_fit_sg_csnr,max_cont_trad_newsnr,newsnr_sgveto,newsnr_sgveto_psdvar,exp_fit_sg_csnr_psdvar}
+  --keep-loudest-stat {newsnr_sgveto_psdvar,newsnr_sgveto,snr,max_cont_trad_newsnr,newsnr_cut,exp_fit_sg_csnr_psdvar,new_snr,exp_fit_sg_csnr,exp_fit_csnr,newsnr}
                         Statistic used to determine loudest to keep
   --finalize-events-template-rate NUM TEMPLATES
                         After NUM TEMPLATES perform the various clustering and
@@ -735,8 +739,8 @@ Options for segmenting the strain:
 
 Options for selecting the processing scheme in this program.:
   --processing-scheme PROCESSING_SCHEME
-                        The choice of processing scheme. Choices are [&#39;cpu&#39;,
-                        &#39;cuda&#39;, &#39;numpy&#39;, &#39;mkl&#39;]. (optional for CPU scheme) The
+                        The choice of processing scheme. Choices are [&#39;mkl&#39;,
+                        &#39;numpy&#39;, &#39;cpu&#39;, &#39;cuda&#39;]. (optional for CPU scheme) The
                         number of execution threads can be indicated by
                         cpu:NUM_THREADS, where NUM_THREADS is an integer. The
                         default is a single thread. If the scheme is provided
@@ -750,7 +754,7 @@ Options for selecting the processing scheme in this program.:
 Options for selecting the FFT backend and controlling its performance in this program.:
   --fft-backends [FFT_BACKENDS [FFT_BACKENDS ...]]
                         Preference list of the FFT backends. Choices are:
-                        [&#39;fftw&#39;, &#39;mkl&#39;, &#39;numpy&#39;]
+                        [&#39;mkl&#39;, &#39;fftw&#39;, &#39;numpy&#39;]
   --fftw-measure-level FFTW_MEASURE_LEVEL
                         Determines the measure level used in planning FFTW
                         FFTs; allowed values are: [0, 1, 2, 3]
