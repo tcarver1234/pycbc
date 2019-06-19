@@ -241,7 +241,7 @@
 <span class="c1"># presented in https://arxiv.org/pdf/gr-qc/0008066.pdf</span>
 
 <div class="viewcode-block" id="gmst_accurate"><a class="viewcode-back" href="../../pycbc.html#pycbc.detector.gmst_accurate">[docs]</a><span class="k">def</span> <span class="nf">gmst_accurate</span><span class="p">(</span><span class="n">gps_time</span><span class="p">):</span>
-    <span class="n">gmst</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="n">gps_time</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;gps&#39;</span><span class="p">,</span>
+    <span class="n">gmst</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="n">gps_time</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;gps&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;utc&#39;</span><span class="p">,</span>
                 <span class="n">location</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">sidereal_time</span><span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rad</span>
     <span class="k">return</span> <span class="n">gmst</span></div>
 
