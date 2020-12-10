@@ -114,6 +114,7 @@ def reweight_snr_by_null(network_snr, nullsnr):
             null: Null snr for each trigger
     Output: reweighted_snr: Reweighted SNR for each trigger
     """
+    nullsnr = np.array(nullsnr)
     nullsnr[nullsnr <= 4.25] = 4.25
     reweighted_snr = network_snr / (nullsnr - 3.25)
     return reweighted_snr
@@ -262,7 +263,12 @@ def coincident_snr(snr_dict, index):
     snr_array = np.array([coinc_triggers[ifo]
                         for ifo in coinc_triggers.keys()])
     rho_coinc = np.sqrt(np.sum(snr_array * snr_array.conj(),axis=0))
-    return rho_coinc
+    #Apply threshold
+    thresh_indexes = rho_coinc > threshold
+    index = index[thresh_indexes]
+    coinc_triggers = {ifo : snr_dict[ifo][index] for ifo in snr_dict.keys()}
+    rho_coinc = rho_coinc[thresh_indexes]
+    return rho_coinc, index, coinc_triggers
 
 def coincident_snr_cut_grid(snr, coinc_idx_list, time_delays, rho_coinc_list, threshold):
     """
