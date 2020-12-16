@@ -27,7 +27,9 @@ from pycbc.types import TimeSeries, zeros, float32, complex64
 from pycbc.types import MultiDetOptionAction
 import pycbc.detector
 import numpy as np
-
+import healpy as hp
+from astropy import units as u
+from astropy.coordinates import SkyCoord
 import time
 
 time_init = time.time()
@@ -91,6 +93,8 @@ parser.add_argument("--user-tag", type=str, metavar="TAG", help="""
 # Arguments added for the coherent stuff
 parser.add_argument("--longitude", type=float)
 parser.add_argument("--latitude", type=float)
+parser.add_argument("--spatial-sigma", type=float, help="""
+                    uncertainity in degrees in localisation of GRB.""")
 parser.add_argument("--coinc-threshold", type=float, default=0.0, help="""
                     Triggers with coincident/coherent snr below this value will
                     be discarded.""")
@@ -122,8 +126,19 @@ opt = parser.parse_args()
 t_gps = opt.trigger_time
 
 # Set sky position being searched.
-ra = opt.longitude
-dec = opt.latitude
+ra_grb = opt.longitude
+dec_grb = opt.latitude
+dec_grb_py = dec_grb-90.
+spat_sigma = opt.spatial_sigma
+nside = 512
+dec_grid,ra_grid = np.degrees(hp.pix2ang(nside,np.arange(hp.nside2npix(nside))))
+dec_grid_py= dec_grid-90.
+grb_loc = SkyCoord(ra_grb*u.deg,dec_grb_py*u.deg,frame='icrs')
+grid_loc = SkyCoord(ra_grid*u.deg,dec_grid_py*u.deg,frame='icrs')
+grid_sep = grb_loc.separation(grid_loc)
+mask = grid_sep<spat_sigma
+dec_grid = dec_grid[mask]
+ra_grid = ra_grid[mask]
 
 # Put the ifos in alphabetical order so they are always called in
 # the same order.
@@ -193,8 +208,9 @@ with ctx:
 
     #Calculate time delay to each detector
     time_slides = t_gps+opt.time_shift*np.arange(1+opt.num_slides)
-    time_delay_idx = {ifo :  int(round(pycbc.detector.Detector(ifo).
+    time_delay_idx = {ifo :  [int(round(pycbc.detector.Detector(ifo).
                      time_delay_from_earth_center(ra,dec,t_gps) * sample_rate))
+                     for ra,dec in zip(ra_grid,dec_grid)]
                      for ifo in opt.instruments}
     time_delay_idx_bg = {ifo : [int(round(pycbc.detector.Detector(ifo).
                      time_delay_from_earth_center(ra,dec,t) * sample_rate))
@@ -298,8 +314,8 @@ with ctx:
     Fp = {} #Antenna patterns
     Fc = {}
     for ifo in opt.instruments:
-        Fp[ifo], Fc[ifo] = pycbc.detector.Detector(ifo).antenna_pattern(
-            ra, dec, polarization=0, t_gps=t_gps)
+        Fp[ifo], Fc[ifo] = np.array([pycbc.detector.Detector(ifo).antenna_pattern(
+            ra, dec, polarization=0, t_gps=t_gps) for ra, dec in zip(ra_grid,dec_grid)])
 
     for t_num, template in enumerate(bank): #Loop over templates
         for ifo in opt.instruments:
@@ -373,15 +389,16 @@ with ctx:
             #Even if we have none, need to keep an empty dictionary.
             #Only do this is idx doesn't get time shifted out of the time
             #we are looking at.
-            idx_dict = {ifo : idx[ifo][np.logical_and(
+            idx_dict = {ifo : [idx[ifo][np.logical_and(
                        idx[ifo] > time_delay_idx[ifo],idx[ifo] -
                        time_delay_idx[ifo]  < len(snr[ifo]))]
+                       for t in range(len(time_delay_idx[ifo]))] 
                        for ifo in opt.instruments}
             
             idx_dict_bg = {ifo :[idx[ifo][np.logical_and(
                        idx[ifo] > time_delay_idx_bg[ifo][t],idx[ifo] -
                        time_delay_idx_bg[t][ifo]  < len(snr[ifo]))]
-                       for t in range(len(timeslides))] 
+                       for t in range(len(time_delay_idx[ifo]))] 
                        for ifo in opt.instruments} 
             #Find triggers that are coincident (in geocent time) in multiple ifos.
             #If a single ifo analysis then just use the indexes from that ifo.
