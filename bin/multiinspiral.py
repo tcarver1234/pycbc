@@ -224,31 +224,45 @@ def coherent_snr(snr_triggers, index, threshold, projection_matrix,
     rho_coh = rho_coh[rho_coh > threshold]
     return rho_coh, index, snrv, coinc_snr
 
-def coincident_snr_grid(snr_dict, coinc_idx_list, time_delays):
+def coincident_snr_grid(snr, coinc_idx_list, time_delays, rho_coinc_list, threshold):
     """
-    Input: snr_dict: Dictionary of individual detector SNR
+    Input: snr: Dictionary of individual detector SNR
            coinc_idx_list   : list of arrays of geocent indices you want to find coinc SNR for
        time_delays : list of time delays to aply to SNR to find coincidences. 
     Output: rho_coinc_list: Coincident snr triggers
                             indexes that survive cuts
     """
     rho_coinc_list=[]
+    rho_coinc_list_filt=[]
+    coinc_idx_list_filt=[]
+    coinc_triggers_list=[]
+
     if isinstance(time_delays[list(time_delays.keys())[0]],int):
         for ifo in snr_dict.keys():
-            snr_dict[ifo].roll(-time_delays[ifo])
+            snr[ifo].roll(-time_delays[ifo])
         #Restrict the snr timeseries to just the interesting points
-        rho_coinc_list.append(coincident_snr(snr_dict, coinc_idx_list[0]))
+        rho_coinc_init = coincident_snr(snr_dict, coinc_idx_list[0])
+        #Apply threshold
+        rho_coinc,index,coinc_triggers = coincident_snr_cut(snr,coinc_idx_list[0],rho_coinc_init,threshold)
         for ifo in snr_dict.keys():
-            snr_dict[ifo].roll(time_delays[ifo])
+            snr[ifo].roll(time_delays[ifo])
+        #Apply threshold
+        rho_coinc,index,coinc_triggers = coincident_snr_cut(snr,index,rho_coinc_list[0],threshold)
+        return rho_coinc, index, coinc_triggers
+
     else:
         for i in range(len(time_delays[list(time_delays.keys())[0]])):
             for ifo in snr_dict.keys():
-                snr_dict[ifo].roll(-time_delays[ifo][i])
+                snr[ifo].roll(-time_delays[ifo][i])
             #Restrict the snr timeseries to just the interesting points
-            rho_coinc_list.append(coincident_snr(snr_dict, coinc_idx_list[i]))
+            rho_coinc_init = coincident_snr(snr, coinc_idx_list[i])
+            rho_coinc_filt,index_filt,coinc_triggers = coincident_snr_cut(snr,index,rho_coinc_init,threshold)
+            rho_coinc_list_filt.append(rho_coinc_filt)
+            coinc_idx_list_filt.append(index_filt)
+            coinc_triggers_list.append(coinc_triggers)
             for ifo in snr_dict.keys():
-                snr_dict[ifo].roll(time_delays[ifo][i])
-    return rho_coinc_list
+                snr[ifo].roll(time_delays[ifo][i])
+    return rho_coinc_list_filt, coinc_idx_list_filt, coinc_triggers_list
 
 def coincident_snr(snr_dict, index):
     """
@@ -263,12 +277,7 @@ def coincident_snr(snr_dict, index):
     snr_array = np.array([coinc_triggers[ifo]
                         for ifo in coinc_triggers.keys()])
     rho_coinc = np.sqrt(np.sum(snr_array * snr_array.conj(),axis=0))
-    #Apply threshold
-    thresh_indexes = rho_coinc > threshold
-    index = index[thresh_indexes]
-    coinc_triggers = {ifo : snr_dict[ifo][index] for ifo in snr_dict.keys()}
-    rho_coinc = rho_coinc[thresh_indexes]
-    return rho_coinc, index, coinc_triggers
+    return rho_coinc
 
 def coincident_snr_cut_grid(snr, coinc_idx_list, time_delays, rho_coinc_list, threshold):
     """
